@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --Blue: hsl(246, 80%, 60%);
+  --Light-red-work: hsl(15, 100%, 70%);
+  --Soft-blue-play: hsl(195, 74%, 62%);
+  --Light-red-study: hsl(348, 100%, 68%);
+  --Lime-green-exercise: hsl(145, 58%, 55%);
+  --Violet-social: hsl(264, 64%, 52%);
+  --Soft-orange-self-care: hsl(43, 84%, 65%);
+  --Very-dark-blue: hsl(226, 43%, 10%);
+  --Dark-blue: hsl(235, 46%, 20%);
+  --Desaturated-blue: hsl(235, 45%, 61%);
+  --Pale-Blue: hsl(236, 100%, 87%);
+  --Font-size: 18px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--Very-dark-blue);
+  padding: 1.5rem;
+  color: white;
+  font-size: 18px;
+}
+
+main {
+  width: 90%;
+  max-width: 375px;
+}
+#profile {
+  background-color: var(--Dark-blue);
+  border-radius: 10px;
+}
+ul {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2rem 0.6rem;
+  margin: 10px 0 20px;
+}
+ul li {
+  cursor: pointer;
+}
+.Work {
+  background-color: var(--Light-red-work);
+}
+.Play {
+  background-color: var(--Soft-blue-play);
+}
+.Study {
+  background-color: var(--Light-red-study);
+}
+.Exercise {
+  background-color: var(--Lime-green-exercise);
+
+}
+.Social {
+  background-color: var(--Violet-social);
+}
+.Self {
+  background-color: var(--Soft-orange-self-care);
+}
+.active {
+  opacity: 1;
+}
+
+@media only screen and (min-width: 800px) {
+  main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    min-width: 90%;
+  }
+  #profile {
+    flex-direction: column; 
+    min-width: 150px;
+    max-width: 170px;
+    height: 100%;
+  }
+  #profile-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    align-items: start;
+  }
+  #activity {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(200px, 1fr));
+    grid-template-rows: repeat(2, 1fr);
+    column-gap: 10px;
+    height: 70%;
+    justify-self: center;
+    padding-top: 10px;
+  }
+  ul {
+    padding: 0.3rem 1.2rem;
+  }
+  ul li {
+    margin-bottom: 6px;
+  }
+}
